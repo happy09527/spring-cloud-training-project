@@ -1,0 +1,27 @@
+server:
+  port: 3344
+
+spring:
+  application:
+    name: cloud-config-center
+
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/hapy9527/spring-cloud-config.git # github 上面的git 仓库名称
+          # 搜索目录
+          search-paths:
+            - spring-cloud-config
+          force-pull: true
+          username: hapy9527
+          password: 19959053460zx
+      # 读取分支
+      label: master
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:7003/eureka
