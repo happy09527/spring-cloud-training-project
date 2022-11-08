@@ -1,0 +1,11 @@
+server:
+  port: 80
+
+# 服务别名-------注册zookeeper到注册中心名称
+spring:
+  application:
+    name: cloud-consumerzk-order
+
+  cloud:
+    zookeeper:
+      connect-string: 180.76.231.102:2181 # zookeeper server 单机的地址

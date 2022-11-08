@@ -1,0 +1,32 @@
+server:
+  port: 80
+
+spring:
+  application:
+    name: cloud-feign-hystrix-order-service
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:7003/eureka
+
+
+# 设置feign的超时时间，避免hystrix直接进入fallback模式
+feign:
+  client:
+    config:
+      default:
+        connect-timeout: 5000
+        read-timeout: 5000
+  hystrix:
+    enabled: true
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 3000
