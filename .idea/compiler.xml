@@ -10,6 +10,7 @@
         <module name="cloud-config-center3344" />
         <module name="payment8002" />
         <module name="cloud-config-client3355" />
+        <module name="cloud-config-client3366" />
         <module name="cloud-consumer-consul-order80" />
         <module name="cloud_commons801" />
         <module name="cloud-single-eureka-serve7003" />

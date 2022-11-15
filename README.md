@@ -43,3 +43,6 @@ cloud-single-eureka-serve7003
 
 ### config配置中心
 cloud-config-center3344 cloud-single-eureka-serve7003
+
+### bus消息总线
+cloud-config-client3366 

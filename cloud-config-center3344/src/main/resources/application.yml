@@ -18,7 +18,17 @@ spring:
           password: 19959053460zx
       # 读取分支
       label: master
-
+  rabbitmq:
+    port: 5672
+    host: 180.76.231.102
+    username: root
+    password: root
+    #---------------- rabbit相关配置，暴露bus刷新配置的端点
+    management:
+      endpoints: # 暴露bus刷新配置的端点
+        web:
+          exposure:
+            include: "bus-refresh"
 eureka:
   client:
     register-with-eureka: true
