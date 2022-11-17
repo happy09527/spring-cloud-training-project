@@ -45,4 +45,4 @@ cloud-single-eureka-serve7003
 cloud-config-center3344 cloud-single-eureka-serve7003
 
 ### bus消息总线
-cloud-config-client3366 
+cloud-config-client3366 cloud-config-center3344 cloud-config-client3355 cloud-single-eureka-serve7003
