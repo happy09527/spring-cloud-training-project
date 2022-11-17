@@ -46,3 +46,9 @@ cloud-config-center3344 cloud-single-eureka-serve7003
 
 ### bus消息总线
 cloud-config-client3366 cloud-config-center3344 cloud-config-client3355 cloud-single-eureka-serve7003
+
+### stream消息驱动  屏蔽底层消息中间件的差异，降低切换成本，统一消息的编程模型
+● cloud-stream-rabbitmq-provider8801，作为生产者进行发消息模块
+● cloud-stream-rabbitmq-consumer8802，作为消息接收模块
+● cloud-stream-rabbitmq-consumer8803，作为消息接收模块
+● cloud-single-eureka-serve7003 服务注册中心
