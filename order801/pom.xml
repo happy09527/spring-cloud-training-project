@@ -17,6 +17,12 @@
     </properties>
 
     <dependencies>
+
+        <!-- 配置 zipkin-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zipkin</artifactId>
+        </dependency>
         <!-- 添加Eureka Client 的依赖 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>

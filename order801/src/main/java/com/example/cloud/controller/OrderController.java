@@ -54,8 +54,18 @@ public class OrderController {
         if (instances == null || instances.size() <= 0) {
             return null;
         }
-        ServiceInstance instance = loadBalancer.instance(instances); // 使用我们自己的负载均衡规则获取服务器实例
+        ServiceInstance instance = loadBalancer.instance(instances); // 使用自己的负载均衡规则获取服务器实例
         return restTemplate.getForObject(instance.getUri() + "/payment/lb/loadBalancer", String.class);
     }
 
+    // zipkin 测试
+    @GetMapping("consumer/payment/zipkin")
+    public String paymentZipkin() {
+        List<ServiceInstance> instances = discoveryClient.getInstances("CLOUD-PAYMENT-SERVICE");
+        if (instances == null || instances.size() <= 0) {
+            return null;
+        }
+        ServiceInstance instance = loadBalancer.instance(instances); // 使用自己的负载均衡规则获取服务器实例
+        return restTemplate.getForObject(instance.getUri() + "/payment/zipkin", String.class);
+    }
 }

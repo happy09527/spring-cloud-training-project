@@ -3,6 +3,11 @@ server:
 spring:
   application:
     name: cloud-order-service
+  zipkin:
+    base-url: http://localhost:9411
+  sleuth:
+    sampler:
+      probability: 1 # 表示全部采样
 eureka:
   client:
     # 表示是否将自己注册进EurekaServer 默认为true
@@ -11,8 +16,8 @@ eureka:
     fetch-registry: true
     service-url:
       # 服务器地址
-#      defaultZone: http://eureka7001.com:7001/eureka #单机版eureka
-      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka # 注册到集群中去
+      defaultZone: http://localhost:7003/eureka #单机版eureka
+#      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka # 注册到集群中去
   instance:
     instance-id: order801 # 主机名称
     prefer-ip-address: true # 显示ip地址

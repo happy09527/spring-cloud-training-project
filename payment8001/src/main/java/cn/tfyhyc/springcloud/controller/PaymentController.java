@@ -45,4 +45,11 @@ public class PaymentController {
     public String getPaymentLb() {
         return serverPort;
     }
+
+    // zipkin 测试 接口
+    @GetMapping("/zipkin")
+    public String paymentZipkin(){
+        log.info("zipkin test");
+        return  "hi , i am paymentZipkin server fall back , welcome ti zwb.哈哈";
+    }
 }
